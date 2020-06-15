@@ -1,0 +1,2 @@
+class ScorecardsController < ApplicationController
+end
