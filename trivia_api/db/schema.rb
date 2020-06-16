@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_194822) do
+ActiveRecord::Schema.define(version: 2020_06_16_140104) do
+
+  create_table "friends", force: :cascade do |t|
+    t.integer "friend_id"
+    t.integer "friender_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "scorecards", force: :cascade do |t|
     t.string "category"
