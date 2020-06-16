@@ -5,14 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TRIVIA</title>
   <script src="index.js" defer></script>
+  <link rel="stylesheet" href="app.css">
 </head>
 <body id="login-screen">
+  <h1>Welcome to Trivia Night!</h1>
+  <h2>Grab a drink it's time to think!</h2>
   <section id="login">
+    <h4>First Time?</h4>
     <form method="POST" action="http://localhost:3000/users">
       <input name="username" placeholder="Username" id="username_new" />
       <input name="password" placeholder="Password" id="password_new" />
       <input type="submit" id="new_user" value="Create Account" />
     </form>
+    <h4>You come here oftencd ?</h4>
     <form method="GET" action="http://localhost:3000/users">
       <input name="username" placeholder="Username" id="username" />
       <input name="password" placeholder="Password" id="password" />
