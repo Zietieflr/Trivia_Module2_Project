@@ -12,14 +12,34 @@ if (!difficulty === 'any') {
   triviaURL = `${triviaURL}&difficulty=${difficulty}`
 }
 const finalURL = `${triviaURL}&type=multiple`
+const apiURL = `http://localhost:3000/users/${user}`
+
+
 // console.log('url', triviaURL)
 // console.log('final url', finalURL)
 // console.log('difficulty', difficulty)
 
-const testURL = 'https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple'
-const testBaseURL = 'https://opentdb.com/api.php?amount=10'
+// const testURL = 'https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple'
+// const testBaseURL = 'https://opentdb.com/api.php?amount=10'
 
 fetch(finalURL)
   .then(response => response.json())
   .then(results => console.log('results', results))
 
+fetch(apiURL)
+  .then(response => response.json())
+  .then(result => populateUserInfo(result))
+
+function populateUserInfo(user) {
+  username(user.username) 
+}
+
+function username(name) {
+  const $username = document.getElementById('username')
+  $username.innerText = name 
+}
+
+function populateFormInfo(trivia) {
+  const $category = document.getElementById('category')
+  $category.innerText = trivia[0].category 
+}
