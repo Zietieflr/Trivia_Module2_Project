@@ -9,12 +9,28 @@
 </head>
 <body>
   <header>
-    <h1 id="user">Welcome {user.name}</h1>
+    <h1 id='show-user'></h1>
 
-    <h2>Here are all your scorecards.</h2>
+    <h2>Here are all of your scorecards.</h2>
+    <!-- <ol id='full-card'></ol>
+      <li id='scorecard-list'></li>
+      <li id= 'difficulty'></li>
+      <li id= 'percent'></li> -->
+    <div id='scorecards'></div>
+
+  
+ 
 
 
-    <h4>Here is your friends list</h4>
+  <h4>Here is your friends list</h4>
+
+  <form method='SHOW' action=`http://localhost:3000/users/${id}`>
+  <select name="friends" id="Friends-List"></select>
+
+  </form>
+
+    <!-- <button>Follow</button>
+    <button>Unfollow</button> -->
   </header>
   <main>
     <section>
