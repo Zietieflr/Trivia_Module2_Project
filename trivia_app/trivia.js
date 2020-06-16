@@ -1,0 +1,25 @@
+const searchParams = new URLSearchParams (window.location.search)
+const user = searchParams.get('user')
+const amount = searchParams.get('amount')
+const category = searchParams.get('category')
+const difficulty = searchParams.get('difficulty')
+
+let triviaURL = `https://opentdb.com/api.php?amount=${amount}`
+if (!category === 'any') {
+  triviaURL = `${triviaURL}&category=${category}`
+}
+if (!difficulty === 'any') {
+  triviaURL = `${triviaURL}&difficulty=${difficulty}`
+}
+const finalURL = `${triviaURL}&type=multiple`
+// console.log('url', triviaURL)
+// console.log('final url', finalURL)
+// console.log('difficulty', difficulty)
+
+const testURL = 'https://opentdb.com/api.php?amount=10&category=17&difficulty=easy&type=multiple'
+const testBaseURL = 'https://opentdb.com/api.php?amount=10'
+
+fetch(finalURL)
+  .then(response => response.json())
+  .then(results => console.log('results', results))
+

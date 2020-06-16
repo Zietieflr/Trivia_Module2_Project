@@ -20,7 +20,7 @@ class FriendsController < ApplicationController
     @friend.destroy 
 
     render status: :no_content
-    # redirect_to Reload page? 
+    # redirect_to Reload page?
   end
 
   def find_friend
