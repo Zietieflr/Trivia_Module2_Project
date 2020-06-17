@@ -91,6 +91,7 @@ function categorySelector(results){
     results.trivia_categories.forEach(trivia_category => {
         const category_option = document.createElement('option')
         category_option.innerText = `${trivia_category.name}`
+        category_option.value = `${trivia_category.id}`
         category_select.append(category_option)
     })
 }
