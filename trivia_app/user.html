@@ -11,28 +11,6 @@
   <header>
     <h1 id='show-user'></h1>
     <h4>Welcome to your user page.</h4>
-
-    <h2>Here are all of your scorecards.</h2>
-    <!-- <ol id='full-card'></ol>
-      <li id='scorecard-list'></li>
-      <li id= 'difficulty'></li>
-      <li id= 'percent'></li> -->
-    <div id='scorecards'></div>
-
-  
- 
-
-
-  <h4>Here is your friends list</h4>
-
-  <form method='SHOW' action=`http://localhost:3000/users/${id}`>
-  <select name="friends" id="Friends-List"></select>
-
-  </form>
-
-
-  </header>
-  <main>
     <section>
       <h3>Ready to start a new game?</h3>
       <form method='GET' action="http://localhost:3000/start" >
@@ -46,7 +24,6 @@
         <option value="hard">Hard</option>
       </select>
       <select name="number_of_questions" id="number-of-questions">
-        <option value="any">Random Number of Questions</option>
         <option value="5">5</option>
         <option value="10">10</option>
         <option value="15">15</option>
@@ -57,10 +34,32 @@
       <input type="submit" id="start-a-new-game" value="Let's Go!">
       </form>
     </section><br>
+    <h2>Here are all of your scorecards.</h2>
+    <!-- <ol id='full-card'></ol>
+      <li id='scorecard-list'></li>
+      <li id= 'difficulty'></li>
+      <li id= 'percent'></li> -->
+    <div id='scorecards'></div>
+
+  
+ 
+
+
+  <!-- <h4>Here is your friends list</h4>
+
+  <form method='SHOW' action=`http://localhost:3000/users/${id}`>
+  <select name="friends" id="Friends-List"></select> -->
+
+  </form>
+
+
+  </header>
+  <main>
+    
   </main>
   <footer>
-    <button>Follow</button>
-    <button>Unfollow</button>
+    <!-- <button>Follow</button>
+    <button>Unfollow</button> -->
   </footer>
 </body>
 </html>
