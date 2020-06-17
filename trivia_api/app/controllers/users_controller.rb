@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     render json: @user, include: [:scorecards, :friends]
+    # redirect_to "http://localhost:3001/user.html?userId=#{@user.id}"
   end
 
   def create
@@ -37,5 +38,15 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find(params[:id])
+  end
+
+  def go_to_trivia
+    @trivia = {
+      hidden_name_id: params[:hidden_name_id],
+      trivia_categories: params[:trivia_categories],
+      difficulty: params[:difficulty],
+      number_of_questions: params[:number_of_questions]
+    }
+    redirect_to "http://localhost:3001/trivia.html?user=#{@trivia[:hidden_name_id]}&amount=#{@trivia[:number_of_questions]}&category=#{@trivia[:trivia_categories]}&difficulty=#{@trivia[:difficulty]}"
   end
 end

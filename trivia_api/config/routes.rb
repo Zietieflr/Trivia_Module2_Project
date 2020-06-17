@@ -2,5 +2,6 @@ Rails.application.routes.draw do
   resources :friends
   resources :scorecards
   resources :users
+  get '/start', to: 'users#go_to_trivia'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

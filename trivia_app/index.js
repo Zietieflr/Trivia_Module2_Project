@@ -8,6 +8,7 @@ fetch(url)
 document.getElementById('new_user').addEventListener("click", createAccount(getResults()))
 document.getElementById('existing_user').addEventListener("click", login(getResults()))
 
+
 function createAccount(results) {
   const filled_form = new FormData(document.querySelector('form'))
   console.log(filled_form)
@@ -15,6 +16,6 @@ function createAccount(results) {
 }
 
 function login(results) {
-
+  // return window.location.replace(`"http://localhost:3001/user.html?userId=${@user.id}"`)
 }
 

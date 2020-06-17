@@ -10,6 +10,7 @@
 <body>
   <header>
     <h1 id='show-user'></h1>
+    <h4>Welcome to your user page.</h4>
 
     <h2>Here are all of your scorecards.</h2>
     <!-- <ol id='full-card'></ol>
@@ -29,16 +30,37 @@
 
   </form>
 
-    <!-- <button>Follow</button>
-    <button>Unfollow</button> -->
+
   </header>
   <main>
     <section>
-
-    </section>
+      <h3>Ready to start a new game?</h3>
+      <form method='GET' action="http://localhost:3000/start" >
+      <select name="trivia_categories" id="Category-List">
+        <option value="any">Random and Mixed Categories!</option>
+      </select>
+      <select name="difficulty" id="difficulty">
+        <option value="any">Random Difficulty!</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <select name="number_of_questions" id="number-of-questions">
+        <option value="any">Random Number of Questions</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="100">100</option>
+      </select>
+      <input name="hidden_name_id" type="hidden" id="user_name_id" value="">
+      <input type="submit" id="start-a-new-game" value="Let's Go!">
+      </form>
+    </section><br>
   </main>
   <footer>
-
+    <button>Follow</button>
+    <button>Unfollow</button>
   </footer>
 </body>
 </html>

@@ -14,14 +14,14 @@
     <h4>First Time?</h4>
     <form method="POST" action="http://localhost:3000/users">
       <input name="username" placeholder="Username" id="username_new" />
-      <input name="password" placeholder="Password" id="password_new" />
+      <input name="password" placeholder="Password" id="password_new" type="password" />
       <input type="submit" id="new_user" value="Create Account" />
     </form>
     <h4>You come here often?</h4>
-    <form method="GET" action="http://localhost:3000/users">
+    <!-- <form method="GET" action="http://localhost:3000/users"> -->
       <input name="username" placeholder="Username" id="username" />
-      <input name="password" placeholder="Password" id="password" />
-      <input type="submit" id="existing_user" value="Login" />
+      <input name="password" placeholder="Password" id="password" type="password" />
+      <input type="submit" id="existing_user" value="Login" onclick=""/>
     </form>
   </section>
 </body>

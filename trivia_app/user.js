@@ -1,6 +1,8 @@
 const searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get('userId')
-
+const hidden_name_id = document.getElementById('user_name_id')
+hidden_name_id.value = id
+console.log(hidden_name_id)
 fetch(`http://localhost:3000/users/${id}`)  
     .then(response => response.json())
     .then(result => nameAndCards(result))
@@ -69,12 +71,27 @@ fetch(`http://localhost:3000/users/${id}`)
     .then(results => friendsListOptions(results))
 
 function friendsListOptions(results){
-    // console.log(results)
     const select = document.getElementById('Friends-List')
     results.friends.forEach(friend => {
         const option = document.createElement('option')
         option.innerHTML = `<a href='http://localhost:3000/users/${friend.id}'>${friend.username}</a>`
         select.append(option)
-        console.log(select)
     })
 }
+
+
+fetch(`https://opentdb.com/api_category.php`)
+    .then(response => response.json())
+    .then(results => categorySelector(results))
+
+
+function categorySelector(results){
+    console.log(results)
+    const category_select = document.getElementById('Category-List')
+    results.trivia_categories.forEach(trivia_category => {
+        const category_option = document.createElement('option')
+        category_option.innerText = `${trivia_category.name}`
+        category_select.append(category_option)
+    })
+}
+
