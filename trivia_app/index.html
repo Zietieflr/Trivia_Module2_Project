@@ -12,17 +12,18 @@
   <h2>Grab a drink it's time to think!</h2>
   <section id="login">
     <h4>First Time?</h4>
-    <form method="POST" action="http://localhost:3000/users">
-      <input name="username" placeholder="Username" id="username_new" />
-      <input name="password" placeholder="Password" id="password_new" type="password" />
-      <input type="submit" id="new_user" value="Create Account" />
+    <form>
+      <input name="username" placeholder="Username" id="username" />
+      <input name="password" placeholder="Password" id="password" type="password" /><br>
+      <input type="button" id="new_user" value="Create Account" />
+      <input type="button" id="existing_user" value="Login" />
     </form>
-    <h4>You come here often?</h4>
-    <!-- <form method="GET" action="http://localhost:3000/users"> -->
+    <!-- <h4>You come here often?</h4>
+    <form method="GET" action="http://localhost:3000/users">
       <input name="username" placeholder="Username" id="username" />
       <input name="password" placeholder="Password" id="password" type="password" />
-      <input type="submit" id="existing_user" value="Login" onclick=""/>
-    </form>
+      
+    </form> -->
   </section>
 </body>
 </html>
