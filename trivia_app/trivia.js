@@ -165,7 +165,7 @@ function createScorecard(numberCorrect) {
   const scorecard = {
     'category': `${categoryText}`,
     'difficulty': `${capitalizeFirstLetter(difficulty)}`,
-    'correct': `${numberCorrect}`,
+    'correct': `${numberCorrect/amount}`,
     'user_id': `${user}`,
   }
   fetch('http://localhost:3000/scorecards', {
