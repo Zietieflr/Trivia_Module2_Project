@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Grenze:wght@300;400;700;800;900&display=swap');
+@import url(‘https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700;900&display=swap’);
 
 body {
-  font-family: 'Grenze', serif;
+  font-family: ‘Exo 2’, sans-serif;
 }
 
 #login {
@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: 
-    linear-gradient(hsl(0, 0%, 0%), hsl(240, 50%, 5%)),
+    linear-gradient(hsl(0, 0%, 0%, .5), hsl(240, 50%, 5%, .5)),
     url(./emily-morter-8xAA0f9yQnE-unsplash.jpg);
   background-blend-mode: saturation;
   background-size: cover;
@@ -22,19 +22,37 @@ h1 {
   position: absolute;  
   top: 2rem; 
   font-size: 70px;
+  background-color: hsl(0, 0%, 90%, .6);
+  padding: .1em; 
+  padding-left: .2em;
+  padding-right: .2em;
+  border-radius: .35em;
+  color: hsl(0, 0%, 12.5%);
+  box-shadow: -5px -5px 25px rgba(255, 0, 0, 0.466);
 }
 
 h2 {
   position: absolute; 
-  bottom: 2rem; 
+  bottom: 3rem; 
   font-size: 55px;
+  background-color: hsl(0, 0%, 90%, .5);
+  padding: .1em; 
+  padding-left: .2em;
+  padding-right: .2em;
+  border-radius: .35em;
+  box-shadow: 1px 1px 10px rgba(255, 0, 0, 0.3);
+  color: hsl(0, 0%, 7.5%)
 }
 
 form {
   position: absolute;
   top: 69%;
-  background-color: hsl(0, 0%, 100%, .6);
+  background-color: hsl(30, 20%, 80%, .9);
   padding: 1rem; 
   border-radius: .5rem;
   display: flex; 
+}
+
+#username, #password {
+  margin-right: 1em;
 }

@@ -6,7 +6,7 @@ body {
     font-family: ‘Exo 2’, sans-serif;
     color: rgb(250, 250, 250);
     background-image: 
-        linear-gradient(hsl(0, 0%, 0%, .5), hsl(240, 50%, 5%)),
+        linear-gradient(hsl(0, 0%, 0%, .8), hsl(240, 50%, 5%)),
         url('beer.jpg');
     background-position: center;
     /* height: 100vh; */
@@ -133,8 +133,6 @@ ul{
    
 }
 
-div {
-    
-
-
-  } 
+#scorecards {
+    background-color: none;
+}
