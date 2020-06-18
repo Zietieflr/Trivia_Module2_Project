@@ -26,6 +26,7 @@ function displayScorecards(scorecards) {
 function showScoreCards(scorecard, scorecard_div) {
         console.log(scorecard_div)
         const fullScorecard = document.createElement('ul')
+        fullScorecard.className = "card"
         fullScorecard.append(renderScorecardInfo(scorecard.category), renderDifficulty(scorecard.difficulty), renderCorrect(scorecard.correct))
         scorecard_div.append(fullScorecard)
 }
