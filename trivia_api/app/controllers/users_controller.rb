@@ -17,7 +17,8 @@ class UsersController < ApplicationController
       username: params[:username],
       password: params[:password]
     )
-    redirect_to "http://localhost:3001/user.html?userId=#{@user.id}"
+    # redirect_to "http://localhost:3001/user.html?userId=#{@user.id}"
+    render json: @user, include: [:scorecards, :friends]
   end
 
   def destroy
