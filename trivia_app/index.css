@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Grenze:wght@300;400;700;800;900&display=swap');
+
+body {
+  font-family: 'Grenze', serif;
+}
+
+#login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: 
+    linear-gradient(hsl(0, 0%, 0%), hsl(240, 50%, 5%)),
+    url(./emily-morter-8xAA0f9yQnE-unsplash.jpg);
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-position: center center;
+}
+
+h1 {
+  position: absolute;  
+  top: 2rem; 
+  font-size: 70px;
+}
+
+h2 {
+  position: absolute; 
+  bottom: 2rem; 
+  font-size: 55px;
+}
+
+form {
+  position: absolute;
+  top: 69%;
+  background-color: hsl(0, 0%, 100%, .6);
+  padding: 1rem; 
+  border-radius: .5rem;
+  display: flex; 
+}
